@@ -1,3 +1,5 @@
+print "PygLatin Game"
+
 pyg = 'ay'
 
 original = raw_input('Enter a word:')
@@ -11,3 +13,5 @@ if len(original) > 0 and original.isalpha():
     print new_word
 else:
     print 'empty'
+    
+print "Go away from here!"
