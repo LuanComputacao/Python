@@ -1,12 +1,13 @@
-word = raw_input("Input a word in English: ")
+pyg = 'ay'
 
-list_of_characters = list(word)
-last_position = len(word)-1
-first_letter = word[0];
-last_letter = word[last_position]
+original = raw_input('Enter a word:')
 
-list_of_characters[0] = last_letter
-list_of_characters[last_position] = first_letter
-
-pigable = ''.join(list_of_characters) + 'ay'
-print pigable
+if len(original) > 0 and original.isalpha():
+    print original
+    word = original.lower()
+    first = word[0]
+    new_word = word + first + pyg
+    new_word = new_word[1:len(new_word)]
+    print new_word
+else:
+    print 'empty'
