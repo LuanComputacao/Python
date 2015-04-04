@@ -8,8 +8,8 @@ if len(original) > 0 and original.isalpha():
     print original
     word = original.lower()
     first = word[0]
-    last = word[len(word)]
-    new_word = last + word[1:(len(word) - 1)] + last + pyg
+    last = word[len(word)-1]
+    new_word = last + word[1:(len(word) - 1)] + first + pyg
     print new_word
 else:
     print 'empty'
