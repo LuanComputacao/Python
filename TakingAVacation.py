@@ -19,7 +19,13 @@ def rental_car_cost(days):
         cost -= 20
     return cost
 
-def trip_cost(city, days, spending_money):
+
+def trip_cost(city, days, spending_money) -> float:
+    """
+
+    :rtype : float
+    """
     return hotel_cost(days) + rental_car_cost(days) + plane_ride_cost(city) + spending_money
-    
-print trip_cost("Los Angeles", 5, 600)
+
+
+print(trip_cost("Los Angeles", 5, 600))
