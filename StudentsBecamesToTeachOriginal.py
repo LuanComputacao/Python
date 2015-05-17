@@ -22,39 +22,43 @@ def average(lstNum):
     total = float(sum(lstNum))
     return float(total / len(lstNum))
 
+
 def get_average(student):
     homework = average(student["homework"])
     quizzes = average(student["quizzes"])
     tests = average(student["tests"])
-    return 0.1*homework + 0.3*quizzes + 0.6*tests
+    return 0.1 * homework + 0.3 * quizzes + 0.6 * tests
+
 
 def get_letter_grade(score):
-    if score>=90:
+    if score >= 90:
         return 'A'
-    elif score>=80:
+    elif score >= 80:
         return 'B'
-    elif score>=70:
+    elif score >= 70:
         return 'C'
-    elif score>=60:
+    elif score >= 60:
         return 'D'
     else:
         return 'F'
-        
+
+
 def print_average_list(students):
     for student in students:
-        print student["name"]
-        print get_letter_grade(student)
+        print(student["name"])
+        print(get_letter_grade(student))
+
 
 def get_class_average(students):
-    results =[]
+    results = []
     for student in students:
         results.append(get_average(student))
     return average(results)
 
 
 lstStudents = [lloyd, alice, tyler]
-print print_average_list(lstStudents)
-print "Class:"
+print(print_average_list(lstStudents))
+print("Class:")
 classAverage = get_class_average(lstStudents)
-print classAverage
-print get_letter_grade(classAverage)
+print(classAverage)
+print(get_letter_grade(classAverage))
